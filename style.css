@@ -1,0 +1,37 @@
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  transition: 500ms;
+  margin: 0 30%
+}
+  
+  
+  h1 {
+  color: #4B95EB;
+  text-align: center;
+  margin: 0 auto;
+  font-family: roboto condensed;
+}
+
+body {
+  font-family: 'Slabo 27px', serif;
+  background-color: #DEC052;
+  display: grid;
+  text-align: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 10px;
+}
+
+div {margin: 0 auto;
+font-family: 'Staatliches', cursive;
+}
+ 
