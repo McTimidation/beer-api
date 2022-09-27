@@ -1,14 +1,17 @@
-let state = document.getElementById("stateInput").value;
-let city = document.getElementById("cityInput").value;
+let state = document.getElementById("stateInput");
+let city = document.getElementById("cityInput");
 
 
 let url = "https://api.openbrewerydb.org/breweries";
-let urlState = "?by_state=" + `${state}`;
-let urlCity = "&by_city=" + `${city}`;
+let urlState = "?by_state=";
+let urlCity = "&by_city=";
 let button = document.getElementById('button');
 
+let sInput = state.value;
+let cInput = city.value;
+
 function getData() {
-    fetch(url + urlState + urlCity + "&per_page=50")
+    fetch(url + urlState + state.value + urlCity + city.value + "&per_page=50")
         .then((response) => response.json())
         .then((data) => {
             let beer = `<h2>Breweries</h2>`
@@ -19,8 +22,8 @@ function getData() {
         });
         console.log(urlCity);
         console.log(urlState);
-        console.log(state);
+        console.log(state.value);
         console.log(city);
-        console.log(url+urlState+urlCity+'&per_page=50')
+        console.log(url + urlState + state.value + urlCity + city.value + "&per_page=50")
 }
 button.addEventListener('click', getData)
